@@ -50,7 +50,7 @@ def create():
     tmp = {key: dict()}
     for field in fields:
         res = input(f"{field}: ")
-        tmp[key][field] = int(res) if res.isnumeric() else res
+        tmp[key][field] = int(res)
         pets[last+1] = tmp
 
 def read():
@@ -66,7 +66,7 @@ def read():
             f'Имя владельца: {pet[key]["Имя владельца"]}'
     print(string)
 
-def update(): #обновлять информацию об указанном питомце
+def update():
     print("### Комманда update")
     ID = int(input("Введите ID: "))
     pet = get_pet(ID)
@@ -79,7 +79,7 @@ def update(): #обновлять информацию об указанном �
     for key, value in pet[kkey].items():
         res = input(f"{key}: ")
         if res:
-            tmp[key] = int(res) if res.isnumeric() else res
+            tmp[key] = int(res)
             pet[kkey].update(tmp)
 
 def delete():
