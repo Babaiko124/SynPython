@@ -7,7 +7,7 @@ from pynput import keyboard
 from clouds import Clouds
 
 
-TICK_SLEEP =0.05
+TICK_SLEEP =10
 TREE_UPDATE = 50
 CLOUDS_UPDATE = 100
 FIRE_UPDATE = 100
@@ -28,9 +28,9 @@ def process_key(key):
         dx, dy = MOVES[c][0], MOVES[c][1]
         heli.move(dx,dy)
     if c == 'f':
-        data = {'helicopter': heli.export_data(), 
-                    'clouds': clouds.export_data(), 
-                     'field': field.export_data()}
+        data = {'helicopter': heli.export_data(),
+                'clouds': clouds.export_data(),
+                'field': field.export_data()}
         with open('level.json','w') as lvl:
             json.dump(data, lvl)
         

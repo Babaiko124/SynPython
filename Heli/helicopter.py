@@ -29,4 +29,10 @@ class Helicopter:
         print('GAME OVER, YOUR SCORE IS', self.score)
         exit(0)
 
+    def export_data(self):
+        return {'score': self.score,
+                'lives': self.lives,
+                'x': self.x, 'y': self.y,
+                'tank': self.tank, 'mxtank': self.mxtank}
+
 
