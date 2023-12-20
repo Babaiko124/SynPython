@@ -115,6 +115,9 @@ class Map:
             if (heli.lives == 0):
                 heli.game_over()
 
+    def export_data(self):
+        return {'cells': self.cells}
+
         
 
 
