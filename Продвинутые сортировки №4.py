@@ -1,7 +1,6 @@
 def step(n):
     return str(n) if n < 2 else step(n // 2) + str(n % 2)
 
-
 def mult(x, y):
     if y == 0:
         return 0
