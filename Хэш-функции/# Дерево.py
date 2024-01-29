@@ -148,6 +148,7 @@ class BinarySearchTree:
         raise Exception('Что то пошло не так. Не могу удалить узел')
     
     
+    
 bst = BinarySearchTree()
 print(bst.find(10), bst.find(8), bst.find(20))
 bst.add(10)
@@ -180,4 +181,5 @@ bst.delete(6)
 print(bst.find(5), bst.find(6), bst.find(7))
 bst.delete(7)
 print(bst.find(5), bst.find(6), bst.find(7))
+
 a = 10
